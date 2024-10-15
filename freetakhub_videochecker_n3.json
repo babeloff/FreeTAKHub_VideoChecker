@@ -12,7 +12,7 @@
         "method": "POST",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "",
+        "url": "http://{{{addr}}}:{{{port}}}/ManageVideoStream/postVideoStream",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -184,7 +184,7 @@
         "method": "GET",
         "ret": "obj",
         "paytoqs": "ignore",
-        "url": "",
+        "url": "http://{{{addr}}}:{{{port}}}/v1/paths/list",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -509,9 +509,16 @@
         "rules": [
             {
                 "t": "set",
-                "p": "url",
+                "p": "addr",
                 "pt": "msg",
-                "to": "http://${FTH_FTS_URL}:${FTH_FTS_API_Port}/ManageVideoStream/postVideoStream",
+                "to": "${FTH_FTS_URL}",
+                "tot": "env"
+            },
+            {
+                "t": "set",
+                "p": "port",
+                "pt": "msg",
+                "to": "${FTH_FTS_API_Port}",
                 "tot": "env"
             }
         ],
@@ -537,10 +544,17 @@
         "rules": [
             {
                 "t": "set",
-                "p": "url",
+                "p": "addr",
                 "pt": "msg",
-                "to": "http://${FTH_FTS_VIDEO_URL}:${FTH_FTS_VIDEO_API_Port}/v1/paths/list",
+                "to": "${FTH_FTS_VIDEO_URL}",
                 "tot": "env"
+            },
+            {
+                "t": "set",
+                "p": "port",
+                "pt": "msg",
+                "to": "${FTH_FTS_VIDEO_API_Port}",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -548,7 +562,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 490,
+        "x": 500,
         "y": 80,
         "wires": [
             [
