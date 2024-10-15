@@ -459,7 +459,7 @@
         "id": "a4bc3376.a38dd",
         "type": "function",
         "z": "a5f5a9650a2aec79",
-        "name": "",
+        "name": "split by color",
         "func": "var colors=[\"red\",\"blue\",\"green\"];\nfor (let i = 0; i < colors.length; i++) { \n  msg.payload = colors[i]\n  node.send(msg);\n}\nreturn;",
         "outputs": 1,
         "timeout": "",
@@ -467,7 +467,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
+        "x": 320,
         "y": 820,
         "wires": [
             [
@@ -512,7 +512,7 @@
                 "p": "url",
                 "pt": "msg",
                 "to": "http://${FTH_FTS_URL}:${FTH_FTS_API_Port}/ManageVideoStream/postVideoStream",
-                "tot": "str"
+                "tot": "env"
             }
         ],
         "action": "",
@@ -540,7 +540,7 @@
                 "p": "url",
                 "pt": "msg",
                 "to": "http://${FTH_FTS_VIDEO_URL}:${FTH_FTS_VIDEO_API_Port}/v1/paths/list",
-                "tot": "str"
+                "tot": "env"
             }
         ],
         "action": "",
