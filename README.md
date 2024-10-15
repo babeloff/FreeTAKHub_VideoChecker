@@ -44,4 +44,14 @@ ATAK shows the video, connecting to the FTS to visualized the COT and to the vid
 
 * in the "FTH Global Config" node set the value for IPs of the different servers
 
+Here are the names of those global variables and some sample values.
+
+```
+ "FTH_FTS_URL": "127.0.0.1"
+ "FTH_FTS_API_Port": "19023"
+ "FTH_FTS_STREAM_Port": "8554"
+ "FTH_FTS_VIDEO_URL": "127.0.0.1"
+ "FTH_FTS_VIDEO_API_Port": "9997"
+```
+
 
