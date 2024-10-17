@@ -54,4 +54,25 @@ Here are the names of those global variables and some sample values.
  "FTH_FTS_VIDEO_API_Port": "9997"
 ```
 
+## Contents
 
+### `freetakhub_videochecker.json`
+
+Deprecated.
+
+This contains a flow for setting the global context variables.
+Using global context variables is not guaranteed to be installed before they are used.
+Since v3.1 NodeRED recommends using global environment variables instead.
+
+### `freetakhub_videochecker.json_n3.json`
+
+Updates to use global environment variables.
+
+
+### `README.md`
+
+This file.
+
+### `LICENSE`
+
+Eclipse Public License.
